@@ -1,6 +1,6 @@
 NETWORKING
 
-1.OSI Model:
+1.OSI Model: (please do not throw my salami pizza away)
 Application     , Presentation, Service, Transport  , Network, Data Link, Physical
 (User Interface)  (translate    (Session)(TCP/UDP)    (IPV4/6)   (MAC)      (Hardware)      
 (Data)             for comp to  (Data)   (Segments/   (Packets) (Frames&   (Bits)
