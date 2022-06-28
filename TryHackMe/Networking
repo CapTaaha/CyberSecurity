@@ -2,16 +2,17 @@ NETWORKING
 
 1.OSI Model:
 Application     , Presentation, Service, Transport  , Network, Data Link, Physical
-(User Interface)  (translate    (Session)(TCP/UDP)    (IPV4/6)   (MAC)      (Hardware)      (Data)             for comp to  (Data)   (Segments/   (Packets) (Frames&   (Bits)
+(User Interface)  (translate    (Session)(TCP/UDP)    (IPV4/6)   (MAC)      (Hardware)      
+(Data)             for comp to  (Data)   (Segments/   (Packets) (Frames&   (Bits)
                    understand)            Datagrams)             trailer)
                    (Data)
 
 
 *TCP-Transmission Control Protocol(3 way handshake)(connection-based protocol)
 
-*UDP-User Datagram Protocol(packets of data are essentially thrown at the receiving                                     computer -- if it can't keep up then that's its problem)
+*UDP-User Datagram Protocol(packets of data are essentially thrown at the receiving computer -- if it can't keep up then that's its problem)
 
-*MAC-Media Access Control(MAC addresses are set by the manufacturer and literally burnt                           into the card; they can't be changed -- although they can be                           spoofed)
+*MAC-Media Access Control(MAC addresses are set by the manufacturer and literally burnt into the card; they can't be changed -- although they can be spoofed)
 
 
 *Application->...->Physical == Encapsulation
@@ -24,7 +25,8 @@ Transport=>(Transport),
 Internet=>(Network),
 Network Interface=>(DataLink, Physical)
 
-*OSI model was also introduced by the International Organisation for Standardisation (ISO); however, it's mainly used as a more comprehensive guide for learning, as the TCP/IP model is still the standard upon which modern networking is based.
+*OSI model was also introduced by the International Organisation for Standardisation (ISO); however, it's mainly used as a more comprehensive guide for learning, 
+as the TCP/IP model is still the standard upon which modern networking is based.
 
 
 
